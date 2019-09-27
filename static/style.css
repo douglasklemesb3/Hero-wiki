@@ -6,7 +6,7 @@ body{
                          'aside aside aside aside'
                          'section section section section'
                          'footer footer footer footer';
-grid-template-rows: 10vh 15vh 80vh 20vh;
+grid-template-rows: 10vh 15vh 80vh 5vh 20vh;
 }
 
 header{
@@ -66,10 +66,32 @@ aside h3{
 
 section{
     grid-area: section;
-    background-color: rgb(147, 147, 158);
+    background-color: rgb(163, 163, 163);
 
 }
 
 footer{
+    grid-area: footer;
     background-color: #333333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+footer img{
+    width: 45px;
+    height: 45px;
+   
+}
+
+footer h5{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+  
 }
