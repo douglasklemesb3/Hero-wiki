@@ -15,8 +15,6 @@ class Habilidade(models.Model):
     nome = models.CharField(
         max_length=255,
     )
-    nivel_habilidade = models.IntegerField()
-
     def __str__(self):
         return self.nome
 

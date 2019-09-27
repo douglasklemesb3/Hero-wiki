@@ -20,7 +20,7 @@ from rest_framework import routers
 from banco_dados.views import UniversoViewSet, HabilidadeViewSet, CategoriaViewSet, HeroiViewSet
 
 router = routers.DefaultRouter()
-router.register(r'univeros', UniversoViewSet)
+router.register(r'univesos', UniversoViewSet)
 router.register(r'habilidade', HabilidadeViewSet)
 router.register(r'catergoria', CategoriaViewSet)
 router.register(r'heroi', HeroiViewSet)
