@@ -39,16 +39,24 @@ aside{
     grid-area: aside;
     display: flex;
     background-color: rgb(143, 21, 5);   
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 10px solid red;
 }
 
 aside h3{
     margin-top: 40px;
-    margin-left: 80px;
     font-size: 30px;
     color: black;
+    display: flex;
+    
 }
 
-#carouselExampleIndicators{
+#carouselExampleInterval{
     display: flex;
-    align-items: center
+    align-items: center;
+    width: 650px;
+    height: 650px;
+    
+
 }
