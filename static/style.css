@@ -34,7 +34,10 @@ nav a{
     align-items: center;
     font-size: 30px;
     margin: 80px;
-   
+}
+a:hover{
+    text-decoration: none;
+    color: white;
 }
 
 aside{
