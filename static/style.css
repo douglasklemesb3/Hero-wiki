@@ -4,29 +4,31 @@ body{
     grid-template-areas: 'header header header header'
                          'nav nav nav nav'
                          'aside aside aside aside'
+                         'section section section section'
                          'footer footer footer footer';
 grid-template-rows: 10vh 15vh 80vh 20vh;
 }
 
 header{
     grid-area: header;
-    background-color: #333333;
+    background-color: #8b8b8b;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 header h1{
-    color:white;
+    color:rgb(0, 0, 0);
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 nav{
     grid-area: nav;
-    background-color: rgb(189, 189, 189);
+    background-color: #1b1b1b;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 nav a{
-    color:#333333;
+    color: rgb(73, 255, 1);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,10 +40,10 @@ nav a{
 aside{
     grid-area: aside;
     display: flex;
-    background-color: rgb(143, 21, 5);   
+    background-color: rgb(207, 207, 207);   
     align-items: center;
     flex-direction: column;
-    border-bottom: 10px solid red;
+    
 }
 
 aside h3{
@@ -49,6 +51,7 @@ aside h3{
     font-size: 30px;
     color: black;
     display: flex;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     
 }
 
@@ -59,4 +62,14 @@ aside h3{
     height: 650px;
     
 
+}
+
+section{
+    grid-area: section;
+    background-color: rgb(147, 147, 158);
+
+}
+
+footer{
+    background-color: #333333;
 }
