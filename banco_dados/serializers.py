@@ -35,30 +35,50 @@ class CategoriaDTOSerializer(serializers.Serializer):
     nome = serializers.CharField(read_only=True)
 
 
+
 class HeroiSerializer(serializers.Serializer):
-    id = serializers.IntegerField()
+    id = serializers.IntegerField(required=False)
     nome = serializers.CharField(max_length=255)
     fraqueza = serializers.CharField(max_length=255)
     idade = serializers.IntegerField()
-    universo = UniversoDTOSerializer
+    universo = UniversoDTOSerializer()
     habilidade = HabilidadeDTOSerializer(many=True)
     categoria = CategoriaDTOSerializer()
 
-    def create(self,validated_data):
+    def create(self, validated_data):
+        universo_data = validated_data.pop('universo')
+        universo = Universo.objects.get(id=universo_data['id'])
+        categoria_data = validated_data.pop('categoria')
+        categoria = Categoria.objects.get(id=categoria_data['id'])
+        heroi = Heroi.objects.create(universo=universo, categoria=categoria,
+                                     nome=validated_data.get('nome'),
+                                     idade=validated_data.get('idade'),
+                                     fraqueza=validated_data.get('fraqueza')
+                                     )
+
         habilidade_data = validated_data.pop('habilidade')
-        habilidade = Habilidade.objects.get(id=habilidade_data['id'])
-        heroi = Heroi.objects.create(habilidade=habilidade, **validated_data)
+        habilidades = []
+
+        for hab in habilidade_data:
+            habilidades.append(Habilidade.objects.get(id=hab['id']))
+
+        heroi.habilidade.set(habilidades)
         return heroi
 
 
-    def update(self,instance,validated_data):
-        instance.nome = validated_data.get('nome')
-        instance.idade = validated_data.get('idade')
-        instance.fraqueza = validated_data.get('fraqueza')
-        instance.universo = validated_data.get('universo')
-        HabilidadE = validated_data.pop('habilidade')
-        habilidade =Habilidade.objects.get(id=HabilidadE['id'])
-        instance.HabilidadE = habilidade
-        instance.categoria = validated_data.get('categoria')
+    def update(self, instance,validated_data):
+        universo_data = validated_data.pop('universo')
+        universo = Universo.objects.get(id=universo_data['id'])
+        instance.universo = universo
+        categoria_data =validated_data.pop('categoria')
+        categoria = Categoria.objects.get(id=categoria_data['id'])
+        instance.categoria = categoria
+        habilidade_data = validated_data.pop('habilidade')
+        habilidades = []
+
+        for hab in habilidade_data:
+            habilidades.append(Habilidade.objects.get(id=hab['id']))
+
+        instance.habilidade.set(habilidades)
         instance.save()
         return instance
