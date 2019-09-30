@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
+from rest_framework.authtoken.views import obtain_auth_token
 
 from banco_dados.views import UniversoViewSet, HabilidadeViewSet, CategoriaViewSet, HeroiViewSet
 
@@ -25,8 +26,11 @@ router.register(r'habilidade', HabilidadeViewSet)
 router.register(r'catergoria', CategoriaViewSet)
 router.register(r'heroi', HeroiViewSet)
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
+    path('auth-api/', obtain_auth_token)
+
 ]
 

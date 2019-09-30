@@ -21,3 +21,25 @@ class AlunoSerializer(serializers.Serializer):
         instance.prof_favorito = professor
         instance.save()
         return instance
+
+
+        {
+	"nome":"Flash",
+	"fraqueza":"Mortal",
+	"idade": 25,
+	"universo":{
+		"id": 1
+	},
+	"habilidade":[
+			{
+				"id": 2
+			}
+		],
+	"categoria":{
+		"id": 1
+	}
+}
+
+
+
+    "token": "9bac886bdf965e3ee8f40444c62b28a35883ffe1"
