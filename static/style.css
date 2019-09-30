@@ -1,0 +1,100 @@
+body{
+    margin:0;
+    display: grid;
+    grid-template-areas: 'header header header header'
+                         'nav nav nav nav'
+                         'aside aside aside aside'
+                         'section section section section'
+                         'footer footer footer footer';
+grid-template-rows: 10vh 15vh 80vh 5vh 20vh;
+}
+
+header{
+    grid-area: header;
+    background-color: #8b8b8b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header h1{
+    color:rgb(0, 0, 0);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+nav{
+    grid-area: nav;
+    background-color: #1b1b1b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav a{
+    color: rgb(73, 255, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin: 80px;
+}
+a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+aside{
+    grid-area: aside;
+    display: flex;
+    background-color: rgb(207, 207, 207);   
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+aside h3{
+    margin-top: 40px;
+    font-size: 30px;
+    color: black;
+    display: flex;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+#carouselExampleInterval{
+    display: flex;
+    align-items: center;
+    width: 650px;
+    height: 650px;
+    
+
+}
+
+section{
+    grid-area: section;
+    background-color: rgb(163, 163, 163);
+
+}
+
+footer{
+    grid-area: footer;
+    background-color: #333333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+footer img{
+    width: 45px;
+    height: 45px;
+   
+}
+
+footer h5{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+  
+}
