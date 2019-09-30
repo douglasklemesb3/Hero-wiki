@@ -1,20 +1,43 @@
 body{
     margin:0;
+    
 }
 
-h1{
-    font-size: 40px;
-    color: rgb(0, 23, 226);
-    text-decoration-line: underline;
-    text-decoration-color: rgb(49, 20, 20);
-}
 nav{
-    height: 100px;
+    background-color: #8b8b8b;
     display: flex;
-    align-content: center;
     justify-content: center;
-    background-color: #916130;
-    border: solid red;
+    align-items: center;
+    height: 12vh;
+}
+
+nav a{
+    color:rgb(0, 0, 0);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    font-size: 40px;
+    
+}
+nav a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+aside{
+    background-color: #1b1b1b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+}
+aside a{
+    color: rgb(73, 255, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin: 80px;
+    text-decoration: none;
 }
 
 header{
@@ -23,12 +46,11 @@ header{
     justify-content: space-around;
     align-items: center;
     background-image: url(../img/uni/MarvelVSdc.jpg);
-    background-size: 1110px;
-    border: solid red;
+    background-size: 1300px;
+    border: solid  midnightblue;
 }
 
 header a img{
     width: 200px;
     border-radius: 80%;
-    background-color: rgba(0, 0, 255, 0.178);
 }

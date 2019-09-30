@@ -16,9 +16,11 @@ header{
     justify-content: center;
     align-items: center;
 }
-header h1{
+header a{
     color:rgb(0, 0, 0);
     font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    font-size: 40px;
 }
 nav{
     grid-area: nav;
