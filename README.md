@@ -24,6 +24,16 @@ Por fim o projeto deve ser publica utilizando **Nginx e Gunicorn**.
 
 ## BONUS:
 
-Faça uma tela em que é possível jogar um quis sobre herois que acomula pontução para cada resposta correta. 
+Faça uma tela em que é possível jogar um quis sobre herois que acomula pontução para cada resposta correta.
+
+
+
+
+##INTEGRANTES:
+
+- Douglas Klemes
+- Julio Cesár
+- Thiago Mendes
+- Heitor Borba
  
  
